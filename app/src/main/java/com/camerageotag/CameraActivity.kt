@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.TextureView
 import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_camera.*
+
 
 class CameraActivity : AppCompatActivity() {
 
