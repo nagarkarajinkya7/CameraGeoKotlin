@@ -32,8 +32,16 @@ class CameraActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        Log.v(TAG,"onResume")
+        try {
+            if (!Utilities.isInternetConnectionActive(this)) {
+                Toast.makeText(this, "Please check your internet connection", Toast.LENGTH_LONG).show()
+                return
+            }
+        } catch (exception: Exception) {
+            exception.printStackTrace()
+        }
     }
-
 
     private fun initViews() {
         button = findViewById(R.id.getpicture) as Button
